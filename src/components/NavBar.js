@@ -1,7 +1,12 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon } from './Icons';
+import WhatsAppIcon, {
+  GithubIcon,
+  LinkedInIcon,
+  MoonIcon,
+  SunIcon,
+} from './Icons';
 import Logo from './Logo';
 import { motion } from 'framer-motion';
 
@@ -21,7 +26,7 @@ const CustomLink = ({ href, title, className = '' }) => {
 };
 const NavBar = () => {
   return (
-    <header className="px-16 py-8 font-medium flex justify-between items-center">
+    <header className="md:px-8 lg:px-32 py-8 font-medium flex justify-between items-center">
       <nav>
         <CustomLink href="/" title="Home" className="mr-4" />
         <CustomLink href="/about" title="About" className="mx-4" />
@@ -31,7 +36,15 @@ const NavBar = () => {
 
       <nav className="flex items-center justify-center flex-wrap">
         <motion.a
-          href="/"
+          href="https://wa.me/8801718053201"
+          target={'_blank'}
+          className="w-6 mx-3"
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.9 }}>
+          <WhatsAppIcon />
+        </motion.a>
+        <motion.a
+          href="https://github.com/Shafayathub"
           target={'_blank'}
           className="w-6 mx-3"
           whileHover={{ y: -2 }}
@@ -39,7 +52,7 @@ const NavBar = () => {
           <GithubIcon />
         </motion.a>
         <motion.a
-          href="/"
+          href="https://www.linkedin.com/in/md-shafayat-islam-97000110b/"
           target={'_blank'}
           className="w-6 mx-3"
           whileHover={{ y: -2 }}
