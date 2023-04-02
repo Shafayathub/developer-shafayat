@@ -6,6 +6,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import profilePic from '../../public/images/profile/developer-shafayat.png';
+import lightBulb from '../../public/images/svgs/miscellaneous_icons_1.svg';
 
 export default function Home() {
   return (
@@ -43,7 +44,7 @@ export default function Home() {
                 apply any updated technology to make Web Applications perform
                 better.
               </p>
-              <div className="flex items-center self-start mt-2">
+              <div className="flex items-center self-start mt-3">
                 <Link
                   href="/Md-Shafayat-Islam-Resume.pdf"
                   download={true}
@@ -61,6 +62,9 @@ export default function Home() {
           </div>
         </Layout>
         <HireMe />
+        <div className="absolute right-8 bottom-8 inline-block w-24">
+          <Image src={lightBulb} alt="Light-Bulb" className="w-full h-auto" />
+        </div>
       </main>
     </>
   );

@@ -34,7 +34,7 @@ const AnimatedText = ({ text, className = '' }) => {
         variants={quote}
         initial="initial"
         animate="animate"
-        className={`inline-block text-7xl font-bold text-dark capitalize  ${className}`}>
+        className={`inline-block text-7xl font-bold text-dark capitalize ${className}`}>
         {text.split(' ').map((word, index) => (
           <motion.span
             variants={singleWord}
