@@ -1,5 +1,7 @@
 import AnimatedText from '@/components/AnimatedText';
+import Education from '@/components/Education';
 import Layout from '@/components/Layout';
+import Skills from '@/components/Skills';
 import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
@@ -32,12 +34,13 @@ const about = () => {
                 a full stack Web Developer who loves to use the most-performing
                 MERN stack. I enjoy working with clients who appreciate quality.
                 A self-taught Web developer since 2022 and an enthusiastic
-                explorer in this field. I have worked on small to large Web
-                Applications and satisfyingly fulfilled clients' realistic
+                explorer in this field. I have worked on small to medium Web
+                Applications and satisfyingly fulfilled clients&apos; realistic
                 requirements.
               </p>
               <p className="my-4 font-medium">
-                My Skillset: <br /> ✅Javascript <br /> ✅React JS
+                My Skillset:
+                <br /> ✅Javascript <br /> ✅React JS
                 <br /> ✅Next JS <br /> ✅Sanity.io <br /> ✅Express JS <br />{' '}
                 ✅Node JS <br />
                 ✅MongoDB <br /> ✅HTML5 <br /> ✅CSS3 <br /> ✅Deployment
@@ -73,6 +76,8 @@ const about = () => {
               </div>
             </div>
           </div>
+          <Skills />
+          <Education />
         </Layout>
       </main>
     </>
