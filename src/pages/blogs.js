@@ -1,7 +1,11 @@
 import React from 'react';
 import { createClient } from 'next-sanity';
-import PortableText from 'react-portable-text';
+
 import Head from 'next/head';
+import Layout from '@/components/Layout';
+import AnimatedText from '@/components/AnimatedText';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const blog = ({ blogs }) => {
   console.log(blogs);
@@ -18,22 +22,35 @@ const blog = ({ blogs }) => {
                 any updated technology to make Web Applications perform better."
         />
       </Head>
-      <section className="p-32">
-        <PortableText
-          // Pass in block content straight from Sanity.io
-          content={blogs[0].content}
-          projectId="dquhg20o"
-          dataset="production"
-          // Optionally override marks, decorators, blocks, etc. in a flat
-          // structure without doing any gymnastics
-          serializers={{
-            h1: (props) => <h1 {...props} />,
-            li: ({ children }) => (
-              <li className="special-list-item">{children}</li>
-            ),
-          }}
-        />
-      </section>
+      <main className="w-full mb-16 flex flex-col items-center justify-center">
+        <Layout className="pt-16">
+          <AnimatedText text="Words have the power to make a change!" />
+
+          <section className="grid grid-cols-2 gap-16 mt-16">
+            {blogs.map((item) => (
+              <div key={item?.slug?.current}>
+                <Link
+                  href={`/blogpost/${item?.slug?.current}`}
+                  target="_blank"
+                  className="w-full cursor-pointer overflow-hidden rounded-lg">
+                  Image
+                </Link>
+                <Link href={`/blogpost/${item?.slug?.current}`} target="_blank">
+                  <h1 className="capitalize text-2xl font-bold my-2">
+                    {item?.title}
+                  </h1>
+                </Link>
+                <Link href={`/blogpost/${item?.slug?.current}`}>Read more</Link>
+                <br />
+
+                <span className="text-primary font-semibold">
+                  {item?.createdAt}
+                </span>
+              </div>
+            ))}
+          </section>
+        </Layout>
+      </main>
     </>
   );
 };
@@ -44,7 +61,7 @@ export async function getServerSideProps() {
     dataset: 'production',
     useCdn: false,
   });
-  const blogs = await client.fetch(`*[_type == "Blog"]`);
+  const blogs = await client.fetch(`*[_type == "blog"]`);
 
   return {
     props: {
