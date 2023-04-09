@@ -22,7 +22,7 @@ export default function Home() {
                 any updated technology to make Web Applications perform better."
         />
       </Head>
-      <main className="flex items-center text-dark w-full min-h-screen">
+      <main className="flex items-center text-dark dark:text-light w-full min-h-screen">
         <Layout>
           <div className="flex items-center justify-between w-full">
             <div className="w-1/2">
@@ -48,13 +48,13 @@ export default function Home() {
                 <Link
                   href="/Md-Shafayat-Islam-Resume.pdf"
                   download={true}
-                  className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark">
+                  className="flex items-center bg-dark dark:bg-light text-light dark:text-dark p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark">
                   Resume <LinkArrow className="w-6 ml-1" />
                 </Link>
                 <Link
                   href="https://wa.me/8801718053201"
                   target={'_blank'}
-                  className="ml-4 text-lg font-medium text-dark capitalize underline">
+                  className="ml-4 text-lg font-medium text-dark dark:text-light capitalize underline">
                   Contact
                 </Link>
               </div>
