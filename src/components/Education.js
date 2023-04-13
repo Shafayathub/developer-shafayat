@@ -7,14 +7,14 @@ const Details = ({ type, time, place, info }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between">
+      className="my-8 md:my-4 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between">
       <LiIcon reference={ref} />
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: 'sring' }}>
         <h3 className="Capitalize font-bold text-2xl">{type}</h3>
-        <span className="capitalize font-medium text-dark/75">
+        <span className="capitalize font-medium text-dark/75 dark:text-light/75">
           {time} | {place}
         </span>
         <p className="font-medium w-full">{info}</p>
@@ -31,15 +31,17 @@ const Education = () => {
   });
   return (
     <div className="my-64">
-      <h3 className="font-bold text-8xl w-full text-center">Education</h3>
+      <h3 className="font-bold text-8xl xl:text-6xl lg:text-5xl w-full text-center">
+        Education
+      </h3>
       <div className="w-[75%] mx-auto relative mt-16">
         <motion.div
           style={{ scaleY: scrollYProgress }}
           ref={ref}
-          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
+          className="absolute left-9 top-0 w-[4px] h-full bg-dark dark:bg-light origin-top"
         />
 
-        <ul className="flex flex-col items-start justify-between">
+        <ul className="flex flex-col items-start justify-between md:ml-8">
           <Details
             type="Secondary School Certificate (SSC)"
             time="2010-2015"

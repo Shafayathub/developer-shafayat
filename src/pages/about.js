@@ -21,11 +21,14 @@ const about = () => {
                 any updated technology to make Web Applications perform better."
         />
       </Head>
-      <main className="w-full flex flex-col items-center justify-center pb-8">
+      <main className="w-full flex flex-col items-center justify-center pb-8 dark:text-light">
         <Layout>
-          <AnimatedText text="Passion Fuels Purpose!" className="!text-8xl" />
-          <div className="w-full grid grid-cols-8 gap-16 mt-5">
-            <div className="col-span-3 flex flex-col justify-start items-start">
+          <AnimatedText
+            text="Passion Fuels Purpose!"
+            className="!text-8xl xl:!text-5xl sm:!text-3xl"
+          />
+          <div className="w-full grid grid-cols-8 gap-16 sm:gap-8 mt-5">
+            <div className="col-span-3 xl:col-span-4 flex flex-col justify-start items-start md:order-2 md:col-span-8">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark">
                 Biography
               </h2>
@@ -51,26 +54,40 @@ const about = () => {
                 perform better.
               </p>
             </div>
-            <div className="col-span-3 relative h-max rounded-2xl border-2 bg-light border-dark p-8">
-              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] bg-dark rounded-2xl" />
+            <div className="col-span-3 xl:col-span-4 md:order-1 md:col-span-8 relative h-max rounded-2xl border-2 bg-light dark:bg-dark border-dark dark:border-light p-8">
+              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] bg-dark dark:bg-light rounded-2xl" />
               <Image
                 src={profilePic}
                 alt="MD Shafayat Islam"
                 className="w-full h-auto rounded-2xl"
+                priority
+                sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
               />
             </div>
-            <div className="col-span-2 flex flex-col justify-between items-start">
-              <div className="flex flex-col justify-center items-end">
-                <span className="inline-block text-6xl font-bold">2+ year</span>
-                <h3 className="text-xl font-semibold">Comprehensive Learing</h3>
+            <div className="col-span-2 xl:col-span-8 xl:flex-row xl:items-center md:order-3 flex flex-col justify-between items-start">
+              <div className="flex flex-col justify-center items-center">
+                <span className="inline-block text-6xl xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl font-bold">
+                  2+ year
+                </span>
+                <h3 className="text-xl sm:text-base md:text-lg text-center font-semibold">
+                  Comprehensive Learing
+                </h3>
               </div>
               <div className="flex flex-col justify-center items-center">
-                <span className="inline-block text-6xl font-bold">40+</span>
-                <h3 className="text-xl font-semibold">Projects completed</h3>
+                <span className="inline-block text-6xl xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl font-bold">
+                  40+
+                </span>
+                <h3 className="text-xl sm:text-base md:text-lg text-center font-semibold">
+                  Projects completed
+                </h3>
               </div>
               <div className="flex flex-col justify-center items-center">
-                <span className="inline-block text-6xl font-bold">1+ year</span>
-                <h3 className="text-xl font-semibold">
+                <span className="inline-block text-6xl xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl font-bold">
+                  1+ year
+                </span>
+                <h3 className="text-xl sm:text-base md:text-lg text-center font-semibold">
                   Local market Projects experience
                 </h3>
               </div>
