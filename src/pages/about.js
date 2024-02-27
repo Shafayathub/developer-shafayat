@@ -1,11 +1,11 @@
-import AnimatedText from '@/components/AnimatedText';
-import Education from '@/components/Education';
-import Layout from '@/components/Layout';
-import Skills from '@/components/Skills';
-import Head from 'next/head';
-import Image from 'next/image';
-import React from 'react';
-import profilePic from '../../public/images/profile/developer-shafayat-2.jpg';
+import AnimatedText from "@/components/AnimatedText";
+import Education from "@/components/Education";
+import Layout from "@/components/Layout";
+import Skills from "@/components/Skills";
+import Head from "next/head";
+import Image from "next/image";
+import React from "react";
+import profilePic from "../../public/images/profile/developer-shafayat-2.jpg";
 
 const about = () => {
   return (
@@ -44,8 +44,8 @@ const about = () => {
               <p className="my-4 font-medium">
                 My Skillset:
                 <br /> ✅Javascript <br /> ✅React JS
-                <br /> ✅Next JS <br /> ✅Sanity.io <br /> ✅Express JS <br />{' '}
-                ✅Node JS <br />
+                <br /> ✅Next JS <br /> <br /> ✅Express JS <br /> ✅Node JS{" "}
+                <br />
                 ✅MongoDB <br /> ✅HTML5 <br /> ✅CSS3 <br /> ✅Deployment
               </p>
               <p className="font-medium">
